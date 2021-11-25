@@ -12,7 +12,7 @@ client = Client(account_sid, auth_token)
 def sending():
     message = client.messages.create(
         from_=f'whatsapp:+{os.getenv("from")}',
-        body=f'{todays_verses["OT"]}\n{todays_verses["NT"]}',
+        body=f'{todays_verses["OT"][0]}\n{todays_verses["NT"][0]}',
         to=f'whatsapp:+{os.getenv("to")}'
     )
 
