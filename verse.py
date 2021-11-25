@@ -21,8 +21,9 @@ abrevBook = ["gen", "exo", "lev", "num", "deu", "jos", "jdg",
 "phi", "col", "1th", "2th", "1ti", "2ti", "tit",
 "phl", "heb", "jam", "1pe", "2pe", "1jo", "2jo",
 "3jo", "jud", "rev"]
-# from guibible.net import Bible
-# sample=Bible("Psalms",2,1,6)
-# sample.read()
+from guibible.net import Bible
+sample=Bible("Psalms",2,1,6)
+check=sample.read()
+print("check",check)
 for i in book:
     print(scriptures.normalize_reference(f'{i}',chapter=1))

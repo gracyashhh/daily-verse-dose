@@ -24,6 +24,7 @@ total_no_of_verses_OT=total_no_of_verses_OT-Proverbs-Psalms
 # print(total_no_of_chapters/365)
 print("Total number of verses in Old Testament: ",total_no_of_verses_OT)
 print("Total number of verses in New Testament: ",total_no_of_verses_NT)
+print("Actual total number of verses in bible: ",total_no_of_verses_OT+total_no_of_verses_NT+Psalms+Proverbs)
 year=365
 per_day_OT=total_no_of_verses_OT/year
 per_day_NT=total_no_of_verses_NT/year
@@ -88,3 +89,15 @@ print("Cross Check Total: ",cr_total)
 # Psalms - 2461
 # OT - 19770 ( without Psalms and Proverbs)
 # NT - 7957
+
+a=365
+b=total_no_of_verses_OT
+print(b/a,b//a,b%a)
+d={}
+r=b%a
+for i in range(1,a+1):
+    d[i]=b//a
+    if r>0:
+        d[i]+=1
+        r-=1
+print(d)
