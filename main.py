@@ -3,8 +3,8 @@ from twilio.rest import Client
 import os
 from cooking_verse import todays_verses
 # needed only for local env
-# from dotenv import load_dotenv
-# load_dotenv()
+from dotenv import load_dotenv
+load_dotenv()
 
 account_sid = os.getenv("account_sid")
 auth_token =  os.getenv("auth_token")
